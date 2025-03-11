@@ -5,18 +5,27 @@ import { useNavigation } from '@react-navigation/native';
 import MapView,{Marker} from 'react-native-maps';
 import { themeColors } from 'theme';
 import * as Icon from "react-native-feather";
+import { useDispatch, useSelector } from 'react-redux';
+import { selectRestaurant } from 'slices/restaurantSlice';
+import { emptyCart } from 'slices/cartSlice';
 
 
 export default function DeliveryScreen() {
-  const restaurant = featured.restaurant[0];
+  const restaurant = useSelector(selectRestaurant);
   const navigation = useNavigation();
+  const dispatch = useDispatch();
+
+  const cancelOrder = ()=>{
+    navigation.reset({index: 0,routes: [{ name: 'Home' }],})
+    dispatch(emptyCart());
+  }
   return (
     <View style={{ flex: 1}}>
       {/* map view */}
       <MapView
         initialRegion={{
-          latitude: restaurant.lat,
-          longitude: restaurant.lng,
+          latitude: restaurant?.lat || 37.7749,
+          longitude: restaurant?.lng || -122.4194,
           latitudeDelta: 0.01,
           longitudeDelta: 0.01,
         }}
@@ -26,8 +35,8 @@ export default function DeliveryScreen() {
         >
           <Marker
              coordinate={{
-              latitude: restaurant.lat,
-              longitude: restaurant.lng,
+              latitude: restaurant?.lat || 37.7749,
+              longitude: restaurant.lng || -122.4194,
              }}
              title={restaurant.name}
              description={restaurant.description}
@@ -69,7 +78,7 @@ export default function DeliveryScreen() {
                     <TouchableOpacity className="bg-white p-2 rounded-full mx-2">
                     <Icon.Phone fill={themeColors.bgColor(1)} stroke={themeColors.bgColor(1)} strokeWidth={1}/>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.reset({index: 0,routes: [{ name: 'Home' }],})}
+                    <TouchableOpacity onPress={cancelOrder}
                        className="bg-white p-2 rounded-full mx-2">
                      <Icon.X stroke={'red'} strokeWidth={4}/>
                    </TouchableOpacity>

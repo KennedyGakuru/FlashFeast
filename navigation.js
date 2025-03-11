@@ -8,6 +8,7 @@ import HomeScreen from 'screens/HomeScreen';
 import CartScreen from 'screens/CartScreen';
 import OrderPreparingScreen from 'screens/OrderPreparingScreen';
 import DeliveryScreen from 'screens/DeliveryScreen';
+import SeeAllScreen from 'screens/SeeAllScreen';
 
 const Navigation = () => {
   return (
@@ -20,6 +21,7 @@ const Navigation = () => {
         <Stack.Screen name="Cart" options={{presentation:'modal'}} component={CartScreen}/>
         <Stack.Screen name="OrderPreparing" options={{presentation:'fullScreenModal'}} component={OrderPreparingScreen}/>
         <Stack.Screen name="Delivery" options={{presentation:'fullScreenModal'}} component={DeliveryScreen}/>
+        <Stack.Screen name="SeeAllScreen" component={SeeAllScreen} />
     </Stack.Navigator>
    </NavigationContainer>
   )
