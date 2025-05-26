@@ -16,7 +16,7 @@
     "@reduxjs/toolkit": "^2.6.0",
     "@sanity/client": "^6.28.2",
     "@sanity/image-url": "^0.136.3-gql-rtb.359",
-    "expo": "^52.0.37",
+    "expo": "^53.0.9",
     "expo-location": "~18.0.7",
     "expo-status-bar": "~2.0.1",
     "nativewind": "latest",
