@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Food Delivery App",
-    "slug": "food-delivery-app",
+    "name": "FlashFeast",
+    "slug": "flash-feast",
     "version": "1.0.0",
     "web": {
       "favicon": "./assets/favicon.png"
