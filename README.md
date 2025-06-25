@@ -12,8 +12,6 @@ From tasty bites to full-course meals, FlashFeast gets your food delivered at li
   <img src="assets/screens/shot2.jpeg" width="30%" alt="FlashFeast Screenshot 2">
   <img src="assets/screens/shot3.jpeg" width="30%" alt="FlashFeast Screenshot 3">
   <img src="assets/screens/shot4.jpeg" width="30%" alt="FlashFeast Screenshot 4">
-  <img src="assets/screens/shot5.jpeg" width="30%" alt="FlashFeast Screenshot 5">
-  <img src="assets/screens/shot6.jpeg" width="30%" alt="FlashFeast Screenshot 6">
   <img src="assets/screens/shot7.jpeg" width="30%" alt="FlashFeast Screenshot 7">
   <img src="assets/screens/shot8.jpeg" width="30%" alt="FlashFeast Screenshot 8">
   <img src="assets/screens/shot9.jpeg" width="30%" alt="FlashFeast Screenshot 9">
